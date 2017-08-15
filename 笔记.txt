@@ -1,0 +1,45 @@
+﻿set用法:
+创建set<int>
+1) 不能直接改变元素值，因为那样会打乱原本正确的顺序，要改变元素值必须先删除旧元素，则插入新元素
+2) 不提供直接存取元素的任何操作函数，只能通过迭代器进行间接存取，而且从迭代器角度来看，元素值是常数
+3) 元素比较动作只能用于型别相同的容器(即元素和排序准则必须相同)
+count()--返回某个值元素的个数
+equal_range()--返回集合中与给定值相等的上下限的两个迭代器
+erase()--删除集合中的元素
+find() 返回一个指向被查找到元素的迭代器
+insert() 在集合中插入元素
+size() 集合中元素的数目
+lower_bound(ForwardIter first, ForwardIter last,const _Tp& val)算法返回一个非递减序列[first, last)中的第一个大于等于值val的位置。
+
+vector用法:
+
+sort(nums.begin(),nums.end());
+升序排序数组
+
+vector<int> nums;
+创建nums数组
+
+nums.push_back(num);
+将num存入nums数组
+
+nums.size()
+获得nums长度
+
+vec.insert(vec.begin()+i,/n/(可选),a)
+在第i位元素前插入/n/(可选)个a
+
+nums.pop_back();
+删除数组末位元素
+
+nums.erase(nums.begin+i)
+删除数组第i位元素,会重置迭代器
+
+nums.erase(istart,iend)
+删除第start至end之间的元素
+
+nums.clear();
+清空向量
+
+可以让vectorA=vectorB
+
+

@@ -1,0 +1,70 @@
+﻿string用法
+getline(cin,st,'a'); 读取字符到‘a’结束，其中任何字符包括'\n'都能够读入
+s.size() 或 s.length() 返回字符的个数
+s[n]  返回位置为n的字符，从0开始计数
+/*-------------------------插入函数----------------------------------包括迭代器操作和下标操作，下标操作更灵活*/
+s.insert( it , p );  把字符串p插入到it的位置
+s.insert(p,n,t)；   迭代器p元素之前插入n个t的副本
+s.insert(p,b,e);      迭代器p元素之前插入迭代器b到e之间的所有元素
+s.insert(p,s2,poe2,len); 在下标p之前插入s2下标从poe2开始长度为len的元素
+s.insert(pos,cp,len);  下标pos之前插入cp数组的前len个元素。
+/*-----------------------替换函数-------------------------------*/
+s.assign(b,e);  用迭代器b到e范围内的元素替换s
+s.assign(n,t)；  用n个t的副本替换s
+a.assign(s1,pos2,len);从s1的下标pos2开始连续替换len个。
+s.replace ( 3 , 3 , " good " ) ;   从第三个起连续三个替换为good
+s.substr(i,j)   截取s串中从i到j的子串  //string::npos  判断字符串是否结束
+/*-----------------------删除函数-----------------------------*/
+s.erase( 3 )||s.erase ( 0 , 4 ) ;  删除第四个元素或第一到第五个元素
+/*----------------------其他函数-----------------------------*/
+s.find ( " cat " ) ;  超找第一个出现的字符串”cat“，返回其下标值，查不到返回 4294967295，也可查找字符；
+s.append(args); 将args接到s的后面
+s.compare ( " good " ) ;  s与”good“比较相等返回0，比"good"大返回1，小则返回-1；
+reverse ( s.begin(), s.end () );  反向排序函数，即字符串反转函数
+
+
+set用法:
+创建set<int>
+1) 不能直接改变元素值，因为那样会打乱原本正确的顺序，要改变元素值必须先删除旧元素，则插入新元素
+2) 不提供直接存取元素的任何操作函数，只能通过迭代器进行间接存取，而且从迭代器角度来看，元素值是常数
+3) 元素比较动作只能用于型别相同的容器(即元素和排序准则必须相同)
+count()--返回某个值元素的个数
+equal_range()--返回集合中与给定值相等的上下限的两个迭代器
+erase()--删除集合中的元素
+find() 返回一个指向被查找到元素的迭代器
+insert() 在集合中插入元素
+size() 集合中元素的数目
+lower_bound(ForwardIter first, ForwardIter last,const _Tp& val)算法返回一个非递减序列[first, last)中的第一个大于等于值val的位置。
+
+vector用法:
+
+sort(nums.begin(),nums.end());
+升序排序数组
+
+vector<int> nums;
+创建nums数组
+
+nums.push_back(num);
+将num存入nums数组
+
+nums.size()
+获得nums长度
+
+vec.insert(vec.begin()+i,/n/(可选),a)
+在第i位元素前插入/n/(可选)个a
+
+nums.pop_back();
+删除数组末位元素
+
+nums.erase(nums.begin+i)
+删除数组第i位元素,会重置迭代器
+
+nums.erase(istart,iend)
+删除第start至end之间的元素
+
+nums.clear();
+清空向量
+
+可以让vectorA=vectorB
+
+

@@ -1,0 +1,13 @@
+char weishu[10],nul;
+sprintf (weishu,"%d",num);
+int len=strlen (weishu); //获取整数的位数
+sprintf 格式化输出 可将int的数值转为字符串
+
+s.erase(s.begin()+s.find(xx)) erase删除的是地址上的值，所以一定要加.begin()获取首地址 其他类型如vector,set同理
+
+字符串转整数需要将ASCII减去48
+
+二维数组行数 m[x][y] a=m[0].size() b=m.size() a为横长 b为竖宽
+
+
+ 
